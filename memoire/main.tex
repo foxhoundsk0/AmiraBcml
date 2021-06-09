@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {images/}}
+\usepackage[width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry} 
+\usepackage[hidelinks]{hyperref} %Pour pouvoir cliquer sur la table des matières...
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.4pt} %pour  tracer une ligne au dessous l'entete
+\renewcommand{\footrulewidth}{0.4pt} %pour  tracer une ligne au dessus le pied de la page
+\usepackage[style=numeric, backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        \Huge
+        \vspace{0.5cm}
+        \LARGE
+        \textbf{LaTeX: Écrire son mémoire pas par pas}\\
+        \vspace{1.5cm}
+        \Large
+		Amira Bouchama
+        \vfill
+        \large
+		Programme Mobadara\\
+ 		 \vspace{0.8cm}
+ 		 \includegraphics[width=0.4\textwidth]{MobadaraProgram}\\
+         \small
+        02 Juillet 2020
+    \end{center}
+\end{titlepage}
+\newpage
+\chapter*{Remerciments}
+\input{chapitres/remerciment}
+\tableofcontents
+\listoffigures
+\listoftables
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction générale}
+\input{chapitres/introduction}
+\chapter{Premier chapitre}
+\input{chapitres/chapitre1}
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion générale}
+\input{chapitres/conclusion}
+\appendix
+\chapter{Nom Annexe}
+\input{chapitres/annexe}
+\printbibliography
+\chapter*{Résumé}
+\input{chapitres/resume}
+\end{document}
+
